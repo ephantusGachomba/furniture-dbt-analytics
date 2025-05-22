@@ -9,17 +9,26 @@ This dbt project models and analyzes data from a fictional furniture sales busin
 furniture-dbt-analytics/
 ├── models/
 │ ├── raw/
-│ │ └── raw_orders.sql
-│ ├── staging/
-│ │ ├── stg_orders.sql
-│ │ ├── stg_customers.sql
+│ │ ├── raw_customers.sql
+│ │ ├── raw_globalmart.yml
+│ │ ├── raw_orders.sql
+│ │ ├── src_globalmart.yml
+│ │ └── raw_product.sql
+│ ├── reporting/
+│ │ ├── report_profit_by_customer.sql
+│ │ ├── report_profit_by_product.sql
 │ │ └── stg_products.sql
+│ ├── staging/
+│ │ ├── globalmart.md
+│ │ ├── stg_globalmart.yml
+│ │ └── stg_orders.sql
 │ └── marts/
 │ └── orders_summary.sql
 ├── macros/
 ├── snapshots/
 ├── analyses/
 ├── tests/
+│ ├── test_raw_orders_selling_price_is_positive.sql
 ├── dbt_project.yml
 └── README.md
 ```
