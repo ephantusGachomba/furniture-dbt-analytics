@@ -1,0 +1,10 @@
+SELECT 
+    CUSTOMERNAME, 
+    SEGMENT,
+    COUNTRY,
+    SUM(ORDERPROFIT) AS PROFIT
+FROM {{ ref('stg_orders')}}
+GROUP BY
+    CUSTOMERNAME, 
+    SEGMENT,
+    COUNTRY
